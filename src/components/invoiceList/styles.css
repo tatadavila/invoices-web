@@ -1,0 +1,94 @@
+.list-cotainer {
+  padding: 2em;
+}
+
+.table-container {
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+table {
+  border: 1px solid #dfdfdf;
+  border-collapse: collapse;
+  color: #0d0d0d;
+  width: 100%;
+}
+
+th {
+  border: 1px solid#DFDFDF;
+  padding: 8px;
+  font-size: 1.3rem;
+}
+
+thead th {
+  padding: 0.75em 0;
+  text-align: center;
+  background-color: #ebebeb;
+  color: #0d0d0d;
+}
+
+tbody th {
+  font-weight: 400;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.no-info {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.no-data-icon {
+  width: 7em;
+}
+
+.new-invoice-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 600px) {
+  #card table {
+    border: 0;
+  }
+
+  #card table thead {
+    display: none;
+  }
+
+  #card table tr {
+    margin-bottom: 20px;
+    display: block;
+    border-bottom: 2px solid #ddd;
+    box-shadow: 2px 2px 1px #dadada;
+  }
+
+  #card tr:hover {
+    background-color: inherit;
+  }
+
+  #card table th {
+    display: block;
+    text-align: right;
+    font-size: 1rem;
+  }
+
+  #card table th:last-child {
+    border-bottom: 0;
+  }
+
+  #card table th::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+  #card tbody {
+    line-height: 0 !important;
+  }
+}
