@@ -4,8 +4,8 @@
 }
 
 .btn {
-  cursor: pointer;
   border-radius: 4px;
+  cursor: pointer;
   outline: none;
   padding: 0.5em 1.25em;
   white-space: nowrap;
@@ -13,8 +13,8 @@
 
 .btn--primary {
   background-color: var(--primary);
-  color: #000000;
   border: 1px solid var(--primary);
+  color: #000000;
 }
 
 .btn--outline {

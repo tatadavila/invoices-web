@@ -76,8 +76,8 @@ function InvoiceList() {
             <h2>There are no data to show</h2>
           </div>
         )}
-        <Link className="new-invoice-btn">
-          <Button>New Invoice</Button>
+        <Link to="/new-invoice" className="new-invoice-btn">
+          <Button buttonSize="btn--large">New Invoice</Button>
         </Link>
       </div>
     </>

@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <>
       <div className="navbar">
-        <div claaName="navbar-container container">
+        <div Name="navbar-container container">
           <Link to="/" className="navbar-logo">
             <FaFileInvoiceDollar className="navbar-icon" />
             INVOICES

@@ -1,0 +1,15 @@
+.items-container {
+  margin-bottom: 4em;
+}
+
+table {
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  display: grid;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+row {
+  display: grid;
+}
