@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles.css";
+import "./styles.scss";
 import DatePicker from "react-date-picker";
 import { v4 as uuidv4 } from "uuid";
 import { clients, products } from "../data";
@@ -8,10 +8,10 @@ import { RiCalendar2Fill } from "react-icons/ri";
 import RowItems from "../rowItems";
 
 function InvoiceForm() {
-  const [value, onChange] = useState(new Date());
+  const [date, setDate] = useState(new Date());
   const [invoiceNumber, setInvoiceNumber] = useState(1);
   const [row, setRow] = useState(0);
-  const discount = useState(0);
+  const [discount, setDiscount] = useState(0);
   const addRowHandler = () => {
     setRow(row + 1);
   };
@@ -26,11 +26,11 @@ function InvoiceForm() {
     });
   };
 
-  console.log("PRODUCT", productSelected);
+  console.log("DISCOUNT", discount);
 
   return (
     <>
-      <div className="form-container">
+      <div className="form-container" id="mobile">
         <h1>Invoices</h1>
         <form>
           <div className="form-header">
@@ -51,9 +51,9 @@ function InvoiceForm() {
                 clearIcon={null}
                 format="M-d-y"
                 calendarIcon={<RiCalendar2Fill className="calendar-icon" />}
-                onChange={onChange}
+                onChange={setDate}
                 required={true}
-                value={value}
+                value={date}
               />
             </div>
             <div className="header-row">
@@ -79,9 +79,12 @@ function InvoiceForm() {
                 min="0"
                 max="100"
                 placeholder="0%"
+                onChange={(e) => setDiscount(e.target.value)}
               />
             </div>
-            <div className="header-row">
+          </div>
+          <div className="form-body">
+            <div className="select-product">
               <label>Product</label>
               <select id="right-item" defaultValue="">
                 <option hidden value="">
@@ -99,13 +102,12 @@ function InvoiceForm() {
                           price: item.price,
                         })
                       }
-                    >
-                      {item.description}
-                    </option>
+                    ></option>
                   );
                 })}
               </select>
             </div>
+            <Button>Add Item</Button>
           </div>
         </form>
         {/* <RowItems addHandler={this.handleAddRowItem} /> */}

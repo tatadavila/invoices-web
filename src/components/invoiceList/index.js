@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "../button";
 import { Link } from "react-router-dom";
-import "./styles.css";
+import "./styles.scss";
 
 import NoDataIcon from "../../assets/images/noData.svg";
 

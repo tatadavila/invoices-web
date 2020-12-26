@@ -11,9 +11,7 @@ export class RowItems extends Component {
     return (
       <form>
         <div className="items-container">
-          <Button onClick={addHandler}>Add Item</Button>
           <div className="warning-message">Maximun number of item reached</div>
-
           <table role="table">
             <thead>
               <tr role="row">
